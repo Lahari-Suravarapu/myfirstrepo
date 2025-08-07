@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Motivation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      display: inline-block;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Daily Motivation</h1>
+    <p id="quote">Click the button to get a quote!</p>
+    <button onclick="generateQuote()">Get Quote</button>
+  </div>
+
+  <script>
+    const quotes = [
+      "Believe in yourself!",
+      "Every day is a new beginning.",
+      "Push yourself, because no one else will do it for you.",
+      "Success doesn’t come from what you do occasionally, it comes from what you do consistently."
+    ];
+
+    function generateQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").innerText = quotes[randomIndex];
+    }
+  </script>
+</body>
+</html>
